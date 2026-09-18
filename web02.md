@@ -23,7 +23,7 @@
 
 > **若無法預裝Node.js**：學生可用Users權限自行安裝（見「Plan B」），但會多花15分鐘。建議還是預裝。
 
-# W1環境與Git
+# W01環境與Git
 
 ## 架構說明
 
@@ -175,11 +175,6 @@ Web Programming課程實作專案。
 
 ## 學號
 B11012345
-
-## 本機執行
-```bash
-npm install
-npm run dev
 ```
 
 ### 建立index.html
@@ -190,12 +185,12 @@ Ctrl + ~ 在VSCode叫出terminal (default: powershell)
 
 ```powershell
 # y同意安裝http-server
-npx.cmd http-server . -p 3000 -a 0.0.0.0
+npx.cmd http-server . -p 7777 -a 0.0.0.0
 ```
 
-http://127.0.0.1:3000/
+http://127.0.0.1:7777/
 
-http://<ip>:3000/
+http://<ip>:7777/
 
 ### 1.8 第一次commit
 
@@ -205,7 +200,7 @@ git commit -m "0: initialize project"
 ```
 #### git add all files 
 ```powershell
-
+git add .
 ```
 
 ### 1.9 推上GitHub
@@ -224,7 +219,7 @@ git push -u origin main
 
 第一次push會跳出瀏覽器要你登入GitHub授權（Git Credential Manager處理，不需要admin）。
 
-## ✅ W1檢查點
+## ✅ W01檢查點
 
 - [ ] `node --version`、`npm --version`、`git --version`都有輸出
 - [ ] 專案資料夾建在`code`下，VSCode能開啟
@@ -248,3 +243,104 @@ git push -u origin main
 ```
 
 **差別在哪**：第二種問法你會學到「權限模型」這個概念，第一種你只會拿到一串複製貼上的指令。
+
+## 心得
+- 了解github開發環境與社群運作概念
+- AI coding建立基礎專案：create a basic web ui repo so that I can push to github later. start from index.html and README.md with .gitignore for web app.
+- 不須強記git commands，AI可協助： commit "W01: Basic Web UI" and push to https://github.com/<user>/webui.git
+
+---
+
+# W02 — Web UI and HTML
+
+根據專案需求思考畫面設計 ()
+
+> Prompt: 
+> Use open webui style (like chatgpt) to redesign my web framework. Use the simplest HTML and CSS so that I can understand easily.
+> 
+> Prompt: 
+> Split css from html and store in ./css so that I can keep each code file concise.
+
+## Topics: semantic HTML tags
+> 了解以下tags用法
+
+### index.html 使用的語意化標籤
+
+| 標籤 | 位置 | 初學者理解 |
+|---|---|---|
+| `<aside>` | [index.html](index.html#L11) | 主要內容旁邊的輔助內容，例如側邊欄。 |
+| `<main>` | [index.html](index.html#L31) | 頁面的主要內容，一個頁面通常只使用一次。 |
+| `<header>` | [index.html](index.html#L32) | 頁面或區塊的頂部內容，例如標題或選單。 |
+| `<section>` | [index.html](index.html#L38) | 一個有主題的內容區塊，這裡是聊天區域。 |
+| `<h1>` | [index.html](index.html#L40) | 頁面最重要的標題。 |
+| `<p>` | [index.html](index.html#L41) | 一段文字或說明。 |
+| `<form>` | [index.html](index.html#L61) | 使用者輸入資料的表單。 |
+| `<textarea>` | [index.html](index.html#L62) | 可以輸入多行文字的欄位。 |
+| `<button>` | [index.html](index.html#L13) | 可以操作的按鈕，例如新增聊天或送出訊息。 |
+| `<a>` | [index.html](index.html#L21-L23) | 超連結，用來前往其他位置或頁面。 |
+| `<strong>` | [index.html](index.html#L27) | 表示重要文字，通常會以粗體顯示。 |
+| `<small>` | [index.html](index.html#L27) | 表示較次要或補充性的文字。 |
+
+### 沒有特殊語意的標籤
+
+- `<div>`：通用區塊容器，本身沒有特殊含義。
+- `<span>`：行內容器，本身沒有特殊含義。
+
+目前頁面沒有使用 `<nav>`。如果要明確表示側邊欄是網站導覽，可以將導覽按鈕放進 `<nav>` 裡。
+
+### 為什麼要使用語意化標籤？
+
+語意化標籤可以讓瀏覽器、搜尋引擎和螢幕閱讀器理解每個區域的用途。
+
+例如：
+- `<main>` 表示主要內容。
+- `<aside>` 表示側邊內容。
+- `<nav>` 表示導覽。
+- `<form>` 表示表單。
+- `<footer>`
+
+即使不看 CSS，也能大致理解 HTML 的結構。
+
+### Project Milestone
+
+#### Problem
+我要解決什麼問題？
+
+#### Target Users
+誰會使用？
+
+#### Core Features
+- 
+- 
+- 
+
+#### Data
+需要哪些資料？
+
+#### External API
+是否需要API？
+
+#### Security / Privacy
+可能有哪些風險？
+
+#### MVP
+如果只剩4週，我最少要完成哪些功能？
+
+## W02 Learning Log
+
+
+### AI Concept Question
+
+```text
+為什麼不應該整個網站全部用<div>？
+請比較：
+<div>
+<section>
+<article>
+<nav>
+<main>
+
+用實際網頁例子解釋。
+```
+
+---
