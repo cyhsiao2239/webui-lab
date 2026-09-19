@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* 左側邊欄 */
+aside {
+  width: 260px;
+  background-color: #0e398d;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.new-chat-btn {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #565869;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+aside nav a {
+  display: block;
+  color: #ececf1;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+aside nav a:hover {
+  background-color: #343541;
+}
+
+.user-info {
+  margin-top: auto;
+  border-top: 1px solid #565869;
+  padding-top: 10px;
+}
+
+/* 右側主要內容 */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #46a22b;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #4d4d4f;
+  text-align: center;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.message.user {
+  background-color: #d10fa0;
+}
+
+.message.ai {
+  background-color: #d68d17;
+}
+
+/* 輸入框表單 */
+.input-form {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+textarea {
+  flex: 1;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+
+.input-form button {
+  padding: 0 20px;
+  background-color: #f3f30e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

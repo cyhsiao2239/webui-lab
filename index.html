@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Whispering Diary</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div>Hello, World!</div>
+    <!-- 左側邊欄：輔助內容 -->
+  <aside>
+    <button class="new-chat-btn">新增聊天</button>
+    <nav>
+      <a href="#">歷史對話 1</a>
+      <a href="#">歷史對話 2</a>
+      <a href="#">歷史對話 3</a>
+    </nav>
+    <div class="user-info">
+      <strong>使用者名稱</strong>
+      <small>Free Plan</small>
+    </div>
+  </aside>
+
+  <!-- 右側主要區域 -->
+  <main>
+    <header>
+      <h1>✦ The Whispering Diary ✦</h1>
+      <p>~你跟魔法日記的對話~</p>
+    </header>
+
+    <!-- 對話區域 -->
+    <section class="chat-box">
+      <div class="message user">
+        <p>你好，請問 HTML 語意化標籤是什麼？</p>
+      </div>
+      <div class="message ai">
+        <p>語意化標籤是具有明確含義的 HTML 元素，例如 &lt;main&gt;、&lt;aside&gt; 等...</p>
+      </div>
+    </section>
+
+    <!-- 底部輸入表單 -->
+    <form class="input-form">
+      <textarea placeholder="輸入訊息..."></textarea>
+      <button type="submit">送出</button>
+    </form>
+  </main>
+
 </body>
 </html>
